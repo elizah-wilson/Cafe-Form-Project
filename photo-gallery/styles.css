@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+  background-color: #F0EDEE; 
+}
+.nav-bar {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    color: black;
+    font-size: 20px;
+    border-bottom: 2px solid #07393C;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.home-link:hover {
+    color: #2C666E
+}
+.portfolio-link:hover {
+    color: #2C666E
+}
+.about-link:hover {
+    color: #2C666E
+}
+.portfolio-link {
+    background-color: #07393C;
+    color: #F0EDEE;
+    border-bottom: 2px solid #07393C;
+    border-radius: 5px 5px 0 0;
+}
+.grid-container {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+   grid-template-rows: 1fr 1fr 1fr 0.5fr;
+   grid-template-areas: 
+        ". image-1 image-2 image-3 ."
+        ". image-4 image-5 image-6 ."
+        ". image-7 image-8 image-9 .";
+    gap: 20px 10px;
+   width: 100vw; 
+}
+.image-1:hover .card-text{
+    opacity: 100;
+}
+.image-2:hover .card-text{
+    opacity: 100;
+} 
+.image-3:hover .card-text{
+    opacity: 100;
+} 
+.image-4:hover .card-text{
+    opacity: 100;
+}
+.image-5:hover .card-text{
+    opacity: 100;
+}
+.image-6:hover .card-text{
+    opacity: 100;
+} 
+.image-7:hover .card-text{
+    opacity: 100;
+} 
+.image-8:hover .card-text{
+    opacity: 100;
+}
+.image-9:hover .card-text {
+    opacity: 100;
+}
+.card-text{
+    background-color: #07393C;
+    color: white;
+    width: 300px;
+    opacity: 0;
+}
+.image-size {
+    width: 300px;
+    height: 400px;
+}
+.image-1 {
+    grid-area: image-1;
+}
+.image-2 {
+    grid-area: image-2;
+}
+.image-3 {
+    grid-area: image-3;
+}
+.image-4 {
+    grid-area: image-4;
+}
+.image-5 {
+    grid-area: image-5;
+}
+.image-6 {
+    grid-area: image-6;
+}
+.image-7 {
+    grid-area: image-7;
+}
+.image-8 {
+    grid-area: image-8;
+}
+.image-9 {
+    grid-area: image-9;
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+            "image-1 image-2"
+            "image-3 image-4"
+            "image-5 image-6"
+            "image-7 image-8"
+            "image-9 .";
+        width: 100vw;
+        justify-items: center;
+    }
+}
+@media (max-width: 500px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat (9, 1fr);
+        grid-template-areas: 
+            "image-1" 
+            "image-2"
+            "image-3" 
+            "image-4"
+            "image-5" 
+            "image-6"
+            "image-7" 
+            "image-8"
+            "image-9";
+        width: 100vw;
+        justify-items: center;
+}}
